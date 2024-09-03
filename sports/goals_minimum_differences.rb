@@ -3,7 +3,7 @@ def valid_data?(value)
 end
 
 def goal_difference(for_goals, against_goals)
-  return nil if for_goals - against_goals < 0
+  return nil if for_goals - against_goals < 0 # negative differences do not count
   return for_goals - against_goals
 end
 Record = Struct.new(:team, :for_goals, :against_goals)
